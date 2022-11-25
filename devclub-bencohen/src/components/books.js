@@ -76,7 +76,7 @@ const Books = () => {
           <div className="books">
             <ul>
               {books?.map((book, index) => (
-                <li key={index} onClick={showBookInfo}>
+                <li key={index + "abc"} onClick={showBookInfo}>
                   {book.volumeInfo.title}
                 </li>
               ))}
@@ -97,11 +97,9 @@ const Books = () => {
         </button>
         <Divider className={classes.divider} />
         {wishlist?.map((element, index) => (
-          <p>
-            <div key={index + "abc"} className="wishlist">
-              {element}
-            </div>
-          </p>
+          <div key={index + "abc"} className="wishlist">
+            <p> {element} </p>
+          </div>
         ))}
       </Grid>
     </>
